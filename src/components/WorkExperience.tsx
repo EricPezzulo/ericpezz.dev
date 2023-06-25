@@ -3,11 +3,7 @@ import React from "react";
 const WorkExperience = () => {
   return (
     <>
-      <p className="mx-4 my-5 text-center text-gray-500">
-        I started my journey as a full stack developer in 2020. Since then I
-        have specialized web app development.
-      </p>
-      <h4 className="mb-4 bg-black text-2xl font-bold text-white">
+      <h4 className="mb-4 bg-black px-1 text-2xl font-bold text-white">
         Work experience
       </h4>
       <div className="my-4 text-center">

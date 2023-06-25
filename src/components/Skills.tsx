@@ -4,7 +4,9 @@ import React from "react";
 const Skills = () => {
   return (
     <div className="just my-5 flex flex-col items-center">
-      <h4 className="w-fit bg-black text-2xl font-bold text-white">Skills</h4>
+      <h4 className="w-fit bg-black px-1 text-2xl font-bold text-white">
+        Skills
+      </h4>
 
       <div className=" my-5 grid grid-cols-4 gap-8">
         <div className="m-1 h-10 w-10 rounded-lg">

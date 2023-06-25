@@ -24,7 +24,7 @@ const Projects = () => {
       <h2 className="mt-20 text-4xl font-bold">Projects</h2>
       <p className="mx-4 mt-5 text-gray-500">
         Check out some of my personal projects down here. If you have any
-        questions please ask, I&prime;d be happy to speak about them.
+        questions please ask, I&apos;d be happy to speak about them.
       </p>
 
       <div className="mt-4 flex flex-wrap items-center justify-center">
@@ -65,7 +65,7 @@ const Projects = () => {
           amount={6}
         />
       </div>
-      <div className="relative my-5 flex w-full max-w-sm items-center ">
+      <div className="relative my-16 flex w-full max-w-sm items-center ">
         <AiOutlineLeft
           onClick={slideLeft}
           className="h-6 w-6 cursor-pointer text-black opacity-50 duration-150 hover:opacity-100"

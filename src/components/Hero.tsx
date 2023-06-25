@@ -16,12 +16,12 @@ const Hero = () => {
     <div className="min-h-screen">
       <div className="mt-64">
         <h4 className="mx-3 text-center text-4xl font-bold">
-          Hi, I&prime;m Eric and I&prime;m a{" "}
+          Hi, I&apos;m Eric and I&apos;m a{" "}
           <span className="bg-black text-white">Full Stack Developer</span>.
         </h4>
         <p className="mx-4 mt-4 text-center text-gray-500 sm:text-black">
-          I&prime;m a Full Stack Develolper based in New York. I have 3 years
-          professional experience and specialize in creating web app. I&prime;m
+          I&apos;m a Full Stack Develolper based in New York. I have 3 years
+          professional experience and specialize in creating web app. I&apos;m
           open for new opportunities and interesting projects
         </p>
         <div className="mt-8 flex w-full justify-evenly">

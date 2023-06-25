@@ -23,7 +23,9 @@ export default function Footer() {
         </button>
 
         <button type="button">
-          <BsDiscord className="h-6 w-6" />
+          <Link target="_blank" href="https://discord.gg/RsCnmxWF">
+            <BsDiscord className="h-6 w-6" />
+          </Link>
         </button>
       </div>
       <p className="mt-1.5 text-center text-sm text-gray-700">

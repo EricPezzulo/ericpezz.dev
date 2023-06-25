@@ -11,22 +11,29 @@ const Resume = () => {
   return (
     <div
       id="resume-section"
-      className="mx-2 mt-16 flex min-h-screen flex-col items-center justify-center"
+      className="mx-2  flex min-h-screen flex-col items-center justify-center"
     >
       <div className="flex items-center">
-        <h2 className="ml-6 text-4xl font-bold">Resume</h2>
+        <h2 className="ml-6 mt-10 text-4xl font-bold">Resume</h2>
       </div>
-      <div className="my-2">
+      <p className="mx-4 my-5 text-center text-gray-500">
+        I started my journey as a full stack developer in 2020. Since then I
+        have specialized web app development.
+      </p>
+      <WorkExperience />
+      <div className="my-10">
+        <DownloadResume />
+      </div>
+      {/* <div className="my-2">
         <FancySwitch
           enabled={enabled}
           setEnabled={setEnabled}
           enabledLabel="Show Resume"
           disabledLabel="Show Timeline"
         />
-      </div>
-      {!enabled ? <WorkExperience /> : <Timeline />}
-      <div className="my-10">
-        <DownloadResume />
+      </div> */}
+      <div className="my-5" my-5>
+        <Timeline />
       </div>
     </div>
   );
