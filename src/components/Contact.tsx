@@ -2,27 +2,15 @@
 "use client";
 import { RiSendPlaneFill } from "react-icons/ri";
 import { motion } from "framer-motion";
-import { useState, useEffect, useRef } from "react";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-// interface inputProps {
-//   placeholder?: string;
-//   refer?: RefObject<HTMLInputElement>;
-// }
 
-// export const FormInput: React.FC<inputProps> = ({ placeholder, refer }) => {
-//   return (
-//     <div>
-//       <input
-//         ref={refer}
-//         type="text"
-//         placeholder={placeholder}
-//         className="my-2 w-full rounded border bg-gray-100 px-3 py-1"
-//       />
-//     </div>
-//   );
-// };
+interface formData {
+  fullName: string;
+  email: string;
+  message: string;
+}
 
 export default function Contact() {
   const schema = yup.object().shape({
@@ -39,11 +27,6 @@ export default function Contact() {
     resolver: yupResolver(schema),
   });
 
-  interface formData {
-    fullName: string;
-    email: string;
-    message: string;
-  }
   const onSubmit = async (data: formData) => {
     const { fullName, email, message } = data;
     await fetch("/api/email", {
