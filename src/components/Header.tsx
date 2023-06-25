@@ -41,15 +41,9 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ isOpen, setIsOpen }) => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            style={{
-              position: "absolute",
-              width: "100%",
-              left: 0,
-              background: "#fff",
-            }}
-            className="flex items-center justify-center"
+            className="absolute left-0 flex w-full items-center justify-center"
           >
-            <ul className="mt-2 flex w-full flex-col border-x border-b border-gray-200 bg-white shadow">
+            <ul className="mt-2 flex w-full flex-col border-x border-b border-gray-200 bg-white">
               <button type="button" onClick={goToProjects}>
                 <li className="flex w-full border-b border-gray-200 p-2 text-center text-lg font-semibold">
                   Projects
