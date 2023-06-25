@@ -2,12 +2,23 @@
 import { useState } from "react";
 import AppDemoCard from "./AppDemoCard/AppDemoCard";
 import ProjectSelectButton from "./elements/ProjectSelectButton";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 const Projects = () => {
   const [selected, setSelected] = useState<string | undefined>();
+
+  const slideLeft = () => {
+    const slider = document.getElementById("slider");
+    if (slider !== null) slider.scrollLeft = slider.scrollLeft - 355;
+  };
+  const slideRight = () => {
+    const slider = document.getElementById("slider");
+    if (slider !== null) slider.scrollLeft = slider.scrollLeft + 355;
+  };
+
   return (
     <div
-      className="flex min-h-screen flex-col items-center "
+      className="flex min-h-screen flex-col items-center"
       id="projects-section"
     >
       <h2 className="mt-20 text-4xl font-bold">Projects</h2>
@@ -54,8 +65,30 @@ const Projects = () => {
           amount={6}
         />
       </div>
-      <AppDemoCard />
-      <AppDemoCard />
+      <div className="relative my-5 flex w-full max-w-sm items-center ">
+        <AiOutlineLeft
+          onClick={slideLeft}
+          className="h-6 w-6 cursor-pointer text-black opacity-50 duration-150 hover:opacity-100"
+        />
+        <div
+          id="slider"
+          className="scroll flex h-full w-full overflow-x-scroll scroll-smooth whitespace-nowrap scrollbar-hide"
+        >
+          <AppDemoCard />
+          <AppDemoCard />
+          <AppDemoCard />
+          <AppDemoCard />
+          <AppDemoCard />
+          <AppDemoCard />
+          <AppDemoCard />
+          <AppDemoCard />
+          <AppDemoCard />
+        </div>
+        <AiOutlineRight
+          onClick={slideRight}
+          className="h-6 w-6 cursor-pointer text-black opacity-50 duration-150 hover:opacity-100"
+        />
+      </div>
     </div>
   );
 };
