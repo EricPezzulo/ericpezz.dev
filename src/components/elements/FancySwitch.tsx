@@ -20,11 +20,8 @@ const FancySwitch: React.FC<MyComponentProps> = ({
         checked={enabled}
         onChange={setEnabled}
         className={classNames(
-          enabled
-            ? "background-animate animate-gradient-x bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"
-            : "bg-gray-200",
-          "relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none "
-          // focus:ring-2 focus:ring-gray-600 focus:ring-offset-2"
+          enabled ? "bg-black" : "bg-gray-200",
+          "relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-offset-2"
         )}
       >
         <span
