@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useState } from "react";
+import LoadingSpinner from "./elements/LoadingSpinner";
 
 interface formData {
   fullName: string;
@@ -13,15 +15,16 @@ interface formData {
 }
 
 export default function Contact() {
+  const [sending, setSending] = useState<boolean>(false);
   const schema = yup.object().shape({
     fullName: yup.string().required("Name is a required field"),
     email: yup.string().required("Email is a required field"),
     message: yup.string().required("This is a required field"),
   });
-
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
@@ -29,6 +32,7 @@ export default function Contact() {
 
   const onSubmit = async (data: formData) => {
     const { fullName, email, message } = data;
+    setSending(true);
     await fetch("/api/email", {
       method: "POST",
       body: JSON.stringify({
@@ -37,8 +41,9 @@ export default function Contact() {
         message,
       }),
     });
+    setSending(false);
+    reset();
   };
-
   return (
     <div
       id="contact-section"
@@ -85,8 +90,17 @@ export default function Contact() {
               className="mt-2 flex h-9 w-36 items-center justify-center rounded bg-black text-white hover:cursor-pointer"
             >
               <button type="submit" className="flex items-center">
-                <RiSendPlaneFill className="mx-2 h-4 w-4 text-white" />
-                Send
+                {!sending ? (
+                  <>
+                    <RiSendPlaneFill className="mx-2 h-4 w-4 text-white" />
+                    <p>Send</p>{" "}
+                  </>
+                ) : (
+                  <>
+                    <LoadingSpinner />
+                    <p>Sending</p>
+                  </>
+                )}
               </button>
             </motion.div>
           </form>
