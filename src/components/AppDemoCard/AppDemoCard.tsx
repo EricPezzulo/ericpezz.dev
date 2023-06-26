@@ -1,6 +1,6 @@
 export default function AppDemoCard() {
   return (
-    <div className="mx-5 w-fit rounded border border-gray-200 p-3 ">
+    <div className="mx-5 w-fit rounded border border-gray-200 p-3 duration-150 ease-in-out hover:scale-105 hover:cursor-pointer ">
       <div className="flex h-56 w-72 flex-col items-center justify-center rounded bg-gray-200">
         <p className="mx-5 text-center text-gray-700">
           Well this is awkward...

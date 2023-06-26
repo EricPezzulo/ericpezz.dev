@@ -18,16 +18,16 @@ const Projects = () => {
 
   return (
     <div
-      className="flex min-h-screen flex-col items-center"
+      className="sm:border-red flex min-h-screen flex-col items-center sm:min-h-0"
       id="projects-section"
     >
       <h2 className="mt-20 text-4xl font-bold">Projects</h2>
-      <p className="mx-4 mt-5 text-gray-500">
+      <p className="mx-4 mt-5 text-center text-gray-500 sm:max-w-xl">
         Check out some of my personal projects down here. If you have any
         questions please ask, I&apos;d be happy to speak about them.
       </p>
 
-      <div className="mt-4 flex flex-wrap items-center justify-center">
+      <div className="mt-4 flex flex-wrap items-center justify-center sm:max-w-xl">
         <ProjectSelectButton
           buttonTitle="All"
           selected={selected}
@@ -65,14 +65,14 @@ const Projects = () => {
           amount={6}
         />
       </div>
-      <div className="relative my-16 flex w-full max-w-sm items-center ">
+      <div className="relative my-16 flex w-full max-w-sm items-center  sm:max-w-2xl md:max-w-3xl lg:max-w-4xl">
         <AiOutlineLeft
           onClick={slideLeft}
           className="h-6 w-6 cursor-pointer text-black opacity-50 duration-150 hover:opacity-100"
         />
         <div
           id="slider"
-          className="scroll flex h-full w-full overflow-x-scroll scroll-smooth whitespace-nowrap scrollbar-hide"
+          className="scroll flex h-full w-full overflow-x-scroll scroll-smooth whitespace-nowrap py-3 scrollbar-hide"
         >
           <AppDemoCard />
           <AppDemoCard />

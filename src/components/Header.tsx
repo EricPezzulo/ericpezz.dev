@@ -4,6 +4,7 @@ import { PiGithubLogo, PiLinkedinLogoLight } from "react-icons/pi";
 import { HiMenu } from "react-icons/hi";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 interface DropdownMenuProps {
   isOpen: boolean;
@@ -69,6 +70,23 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ isOpen, setIsOpen }) => {
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const linkedInProfile = "https://www.linkedin.com/in/eric-pezzulo-8b2161bb/";
+  const githubProfile = "https://www.github.com/EricPezzulo";
+  const goToProjects = () => {
+    document
+      .getElementById("projects-section")
+      ?.scrollIntoView({ behavior: "smooth" });
+  };
+  const goToResume = () => {
+    document
+      .getElementById("resume-section")
+      ?.scrollIntoView({ behavior: "smooth" });
+  };
+  const goToContact = () => {
+    document
+      .getElementById("contact-section")
+      ?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <header className="flex h-16 w-full items-end sm:px-5">
       <div className="flex w-full justify-between">
@@ -86,19 +104,38 @@ export default function Header() {
         </div>
 
         <div className="hidden h-fit items-center self-center align-bottom sm:flex">
-          <h2 className="px-2.5 font-thin hover:cursor-pointer sm:px-5">
+          <button
+            onClick={goToProjects}
+            className="px-2.5 font-thin hover:cursor-pointer sm:px-5"
+          >
             Projects
-          </h2>
-          <h2 className="px-2.5 font-thin hover:cursor-pointer sm:px-5">
+          </button>
+          <button
+            type="button"
+            onClick={goToResume}
+            className="px-2.5 font-thin hover:cursor-pointer sm:px-5"
+          >
             Resume
-          </h2>
-          <h2 className="px-2.5 font-thin hover:cursor-pointer sm:px-5">
+          </button>
+          <button
+            type="button"
+            onClick={goToContact}
+            className="px-2.5 font-thin hover:cursor-pointer sm:px-5"
+          >
             Contact
-          </h2>
+          </button>
         </div>
         <div className="hidden sm:flex sm:items-center">
-          <PiGithubLogo className="mx-2  h-8 w-8 hover:cursor-pointer" />
-          <PiLinkedinLogoLight className="h-8 w-8 hover:cursor-pointer sm:mr-2" />
+          <button type="button">
+            <Link target="_blank" href={githubProfile}>
+              <PiGithubLogo className="mx-2  h-8 w-8 hover:cursor-pointer" />
+            </Link>
+          </button>
+          <button type="button">
+            <Link target="_blank" href={linkedInProfile}>
+              <PiLinkedinLogoLight className="h-8 w-8 hover:cursor-pointer sm:mr-2" />
+            </Link>
+          </button>
         </div>
       </div>{" "}
       {isOpen && <DropdownMenu isOpen={isOpen} setIsOpen={setIsOpen} />}

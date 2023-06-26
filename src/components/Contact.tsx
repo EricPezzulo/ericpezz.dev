@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
 import LoadingSpinner from "./elements/LoadingSpinner";
+import Notification from "./elements/Notification";
 
 interface formData {
   fullName: string;
@@ -16,6 +17,7 @@ interface formData {
 
 export default function Contact() {
   const [sending, setSending] = useState<boolean>(false);
+  const [notification, setNotifcation] = useState<boolean>(false);
   const schema = yup.object().shape({
     fullName: yup.string().required("Name is a required field"),
     email: yup.string().required("Email is a required field"),
@@ -43,11 +45,13 @@ export default function Contact() {
     });
     setSending(false);
     reset();
+    setNotifcation(true);
+    setTimeout(() => setNotifcation(false), 3000);
   };
   return (
     <div
       id="contact-section"
-      className="flex h-[calc(100vh-4rem)] w-full flex-col items-center pt-24"
+      className="flex h-[calc(100vh-6rem)] w-full flex-col items-center pt-24 sm:h-full sm:py-20 "
     >
       <h3 className=" text-5xl font-bold text-black">Contact</h3>
 
@@ -104,6 +108,7 @@ export default function Contact() {
               </button>
             </motion.div>
           </form>
+          <Notification visable={notification} />
         </div>
       </div>
     </div>

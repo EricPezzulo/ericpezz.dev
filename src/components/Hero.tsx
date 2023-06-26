@@ -13,13 +13,14 @@ const Hero = () => {
       ?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <div className="min-h-screen">
-      <div className="mt-64">
+    <div className="min-h-screen sm:mt-14 sm:flex sm:h-96 sm:min-h-0 sm:items-center ">
+      <div className="mt-64 sm:mt-0 sm:max-w-xl">
         <h4 className="mx-3 text-center text-4xl font-bold">
           Hi, I&apos;m Eric and I&apos;m a{" "}
-          <span className="bg-black text-white">Full Stack Developer</span>.
+          <span className="bg-black px-1 text-white">Full Stack Developer</span>
+          .
         </h4>
-        <p className="mx-4 mt-4 text-center text-gray-500 sm:text-black">
+        <p className="mx-4 mt-4 text-center text-gray-500">
           I&apos;m a Full Stack Develolper based in New York. I have 3 years
           professional experience and specialize in creating web app. I&apos;m
           open for new opportunities and interesting projects
