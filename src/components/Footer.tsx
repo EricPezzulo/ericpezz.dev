@@ -17,7 +17,7 @@ export default function Footer() {
             target="_blank"
             aria-label="Visit my GitHub"
           >
-            <AiFillGithub className="h-6 w-6  sm:duration-150 sm:hover:text-gray-500" />
+            <AiFillGithub className="h-7 w-7 sm:duration-150 sm:hover:text-gray-500" />
           </Link>
         </button>
 
@@ -27,7 +27,7 @@ export default function Footer() {
             target="_blank"
             aria-label="Visit my LinkedIn"
           >
-            <AiFillLinkedin className="h-6 w-6 sm:duration-150 sm:hover:text-gray-500" />
+            <AiFillLinkedin className="h-7 w-7 sm:duration-150 sm:hover:text-gray-500" />
           </Link>
         </button>
 
@@ -37,11 +37,11 @@ export default function Footer() {
             href={discordServer}
             aria-label="Join my Discord Server"
           >
-            <BsDiscord className="h-6 w-6 sm:duration-150 sm:hover:text-gray-500" />
+            <BsDiscord className="h-7 w-7 sm:duration-150 sm:hover:text-gray-500" />
           </Link>
         </button>
       </div>{" "}
-      <p className="my-3 text-center text-sm text-gray-700">
+      <p className="mt-3 text-center text-sm text-gray-700">
         © All rights reserved
       </p>
     </footer>
