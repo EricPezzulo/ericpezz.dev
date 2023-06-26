@@ -1,6 +1,6 @@
 const Education = () => {
   return (
-    <div className="mb-5 flex flex-col items-center justify-center">
+    <div className=" flex flex-col items-center justify-center">
       <h4 className="mb-5 w-fit bg-black px-1 text-2xl font-bold text-white">
         Education
       </h4>

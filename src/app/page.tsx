@@ -34,7 +34,6 @@ export default function Home() {
             <div className="flex flex-col items-center">
               <Projects />
               <Resume />
-              <Education />
               <Skills />
               <About />
               <Contact />

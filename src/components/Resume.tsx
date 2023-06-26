@@ -4,6 +4,7 @@ import React from "react";
 import Timeline from "./Timeline";
 import WorkExperience from "./WorkExperience";
 import DownloadResume from "./DownloadResume/DownloadResume";
+import Education from "./Education";
 // import FancySwitch from "./elements/FancySwitch";
 
 const Resume = () => {
@@ -22,6 +23,10 @@ const Resume = () => {
         have specialized web app development.
       </p>
       <WorkExperience />
+      <div className="mt-3">
+        <Education />
+      </div>
+
       <div className="my-10">
         <DownloadResume />
       </div>
