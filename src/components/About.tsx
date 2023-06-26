@@ -21,7 +21,7 @@ export default function About() {
         </div>
         <div className="text-gray-700">
           <p className="mt-8">
-            I started my journey In tech back in 2008 when I got my first laptop
+            I started my journey in tech back in 2008 when I got my first laptop
             and was immediatly drawn to video editing and YouTube.
           </p>
 
