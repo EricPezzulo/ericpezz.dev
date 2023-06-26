@@ -87,6 +87,7 @@ export default function Header() {
       .getElementById("contact-section")
       ?.scrollIntoView({ behavior: "smooth" });
   };
+  console.log(isOpen);
   return (
     <header className="flex h-16 w-full items-end sm:h-24 sm:items-center sm:bg-gray-50 sm:px-5 ">
       <div className="flex w-full justify-between">
