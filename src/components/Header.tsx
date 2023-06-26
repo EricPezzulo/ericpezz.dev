@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { PiGithubLogo, PiLinkedinLogoLight } from "react-icons/pi";
+import { MdOutlineClose } from "react-icons/md";
 import { HiMenu } from "react-icons/hi";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -89,71 +90,76 @@ export default function Header() {
   };
   console.log(isOpen);
   return (
-    <header className="flex h-16 w-full items-end sm:h-24 sm:items-center sm:bg-gray-50 sm:px-5 ">
-      <div className="flex w-full justify-between">
-        <div className="bg-purple">
-          <Image
-            className="ml-4 sm:ml-0"
-            src="/ericLogo.png"
-            alt="test"
-            width={50}
-            height={50}
-          />
-        </div>
-        <div className="sm:hidden">
-          <button
-            aria-label="Menu button"
-            type="button"
-            onClick={() => setIsOpen((prev) => !prev)}
-          >
-            <HiMenu className="h-8 w-10" />
-          </button>
-        </div>
-
-        <div className="hidden h-fit items-center self-center align-bottom sm:flex ">
-          <button
-            onClick={goToProjects}
-            className="px-2.5 font-thin hover:cursor-pointer sm:px-5 sm:duration-150 sm:hover:text-gray-500"
-          >
-            Projects
-          </button>
-          <button
-            type="button"
-            onClick={goToResume}
-            className="px-2.5 font-thin hover:cursor-pointer sm:px-5 sm:duration-150 sm:hover:text-gray-500"
-          >
-            Resume
-          </button>
-          <button
-            type="button"
-            onClick={goToContact}
-            className="px-2.5 font-thin hover:cursor-pointer sm:px-5 sm:duration-150 sm:hover:text-gray-500"
-          >
-            Contact
-          </button>
-        </div>
-        <div className="hidden sm:flex sm:items-center">
-          <button type="button">
-            <Link
-              target="_blank"
-              href={githubProfile}
-              aria-label="Visit my GitHub"
+    <header className="flex h-16 w-full items-center justify-center sm:h-24 sm:items-center sm:bg-gray-50 sm:px-5 ">
+      <div className="w-full max-w-5xl">
+        <div className="flex w-full justify-between">
+          <div className="bg-purple">
+            <Image
+              className="ml-4 sm:ml-0"
+              src="/ericLogo.png"
+              alt="test"
+              width={50}
+              height={50}
+            />
+          </div>
+          <div className="sm:hidden">
+            <button
+              aria-label="Menu button"
+              type="button"
+              onClick={() => setIsOpen((prev) => !prev)}
             >
-              <PiGithubLogo className="mx-2 h-8 w-8 hover:cursor-pointer sm:duration-150 sm:hover:text-gray-500" />
-            </Link>
-          </button>
-          <button type="button">
-            <Link
-              target="_blank"
-              href={linkedInProfile}
-              aria-label="Visit my LinkedIn"
+              {!isOpen ? (
+                <HiMenu className="h-8 w-10" />
+              ) : (
+                <MdOutlineClose className="h-8 w-8" />
+              )}
+            </button>
+          </div>
+          <div className="hidden h-fit items-center self-center align-bottom sm:flex ">
+            <button
+              onClick={goToProjects}
+              className="px-2.5 font-thin hover:cursor-pointer sm:px-5 sm:duration-150 sm:hover:text-gray-500"
             >
-              <PiLinkedinLogoLight className="h-8 w-8 hover:cursor-pointer sm:duration-150 sm:hover:text-gray-500" />
-            </Link>
-          </button>
-        </div>
-      </div>{" "}
-      {isOpen && <DropdownMenu isOpen={isOpen} setIsOpen={setIsOpen} />}
+              Projects
+            </button>
+            <button
+              type="button"
+              onClick={goToResume}
+              className="px-2.5 font-thin hover:cursor-pointer sm:px-5 sm:duration-150 sm:hover:text-gray-500"
+            >
+              Resume
+            </button>
+            <button
+              type="button"
+              onClick={goToContact}
+              className="px-2.5 font-thin hover:cursor-pointer sm:px-5 sm:duration-150 sm:hover:text-gray-500"
+            >
+              Contact
+            </button>
+          </div>
+          <div className="hidden sm:flex sm:items-center">
+            <button type="button">
+              <Link
+                target="_blank"
+                href={githubProfile}
+                aria-label="Visit my GitHub"
+              >
+                <PiGithubLogo className="mx-2 h-8 w-8 hover:cursor-pointer sm:duration-150 sm:hover:text-gray-500" />
+              </Link>
+            </button>
+            <button type="button">
+              <Link
+                target="_blank"
+                href={linkedInProfile}
+                aria-label="Visit my LinkedIn"
+              >
+                <PiLinkedinLogoLight className="h-8 w-8 hover:cursor-pointer sm:duration-150 sm:hover:text-gray-500" />
+              </Link>
+            </button>
+          </div>
+        </div>{" "}
+        {isOpen && <DropdownMenu isOpen={isOpen} setIsOpen={setIsOpen} />}
+      </div>
     </header>
   );
 }

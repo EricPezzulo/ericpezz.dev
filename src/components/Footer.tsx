@@ -9,8 +9,8 @@ export default function Footer() {
   const githubProfile = "https://www.github.com/EricPezzulo";
   if (!discordServer || !linkedInProfile || !githubProfile) return null;
   return (
-    <footer className="w-full p-2 pt-4 sm:bg-gray-50">
-      <div className="flex h-full w-full items-center justify-evenly">
+    <footer className="flex w-full flex-col items-center justify-center p-2 pt-4 sm:bg-gray-50">
+      <div className="flex h-full w-full max-w-5xl items-center justify-between px-10 lg:px-0">
         <button type="button">
           <Link
             href={githubProfile}
@@ -40,7 +40,7 @@ export default function Footer() {
             <BsDiscord className="h-6 w-6 sm:duration-150 sm:hover:text-gray-500" />
           </Link>
         </button>
-      </div>
+      </div>{" "}
       <p className="my-3 text-center text-sm text-gray-700">
         © All rights reserved
       </p>

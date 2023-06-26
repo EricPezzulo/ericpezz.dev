@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 "use client";
 import { RiSendPlaneFill } from "react-icons/ri";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
 import LoadingSpinner from "./elements/LoadingSpinner";
-import Notification from "./elements/Notification";
+import { MdOutlineClose } from "react-icons/md";
 
 interface formData {
   fullName: string;
@@ -35,7 +35,6 @@ export default function Contact() {
   const onSubmit = async (data: formData) => {
     const { fullName, email, message } = data;
     setSending(true);
-    // setTimeout(() => setSending(false), 2000);
     await fetch("/api/email", {
       method: "POST",
       body: JSON.stringify({
@@ -45,9 +44,8 @@ export default function Contact() {
       }),
     });
     setNotifcation(true);
-    reset();
     setSending(false);
-    setTimeout(() => setNotifcation(false), 3000);
+    reset();
   };
   return (
     <div
@@ -109,7 +107,34 @@ export default function Contact() {
               </button>
             </motion.div>
           </form>
-          <Notification visable={notification} />
+          <AnimatePresence>
+            {notification && (
+              <motion.div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-10 pt-8 backdrop-blur-sm">
+                <motion.div
+                  key="modal"
+                  initial={{ opacity: 0, y: 50, scale: 0.3 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{
+                    opacity: 0,
+                    scale: 0.5,
+                    transition: { duration: 0.2 },
+                  }}
+                  className="mx-10 w-full rounded-md bg-white text-center  shadow-menu sm:mx-0 sm:w-64"
+                >
+                  <div className="flex w-full items-end justify-end ">
+                    <MdOutlineClose
+                      onClick={() => setNotifcation((prev) => !prev)}
+                      className="mr-3 mt-3 h-6 w-6 hover:cursor-pointer hover:text-gray-500"
+                    />{" "}
+                  </div>
+
+                  <p className="px-5 pb-7 pt-1 font-medium text-gray-800">
+                    Your email has been sent
+                  </p>
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </div>
