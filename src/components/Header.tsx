@@ -77,26 +77,26 @@ export default function Header() {
     document
       .getElementById("projects-section")
       ?.scrollIntoView({ behavior: "smooth" });
-    setIsOpen(!isOpen);
+    setIsOpen(false);
   };
   const goToResume = () => {
     document
       .getElementById("resume-section")
       ?.scrollIntoView({ behavior: "smooth" });
-    setIsOpen(!isOpen);
+    setIsOpen(false);
   };
   const goToContact = () => {
     document
       .getElementById("contact-section")
       ?.scrollIntoView({ behavior: "smooth" });
-    setIsOpen(!isOpen);
+    setIsOpen(false);
   };
   const goToAbout: React.MouseEventHandler<HTMLButtonElement> = (e) => {
     e.preventDefault();
     document
       .getElementById("about-section")
       ?.scrollIntoView({ behavior: "smooth" });
-    setIsOpen(!isOpen);
+    setIsOpen(false);
   };
 
   const refOne = useRef<HTMLDivElement>(null);
