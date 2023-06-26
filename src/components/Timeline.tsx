@@ -17,7 +17,7 @@ const Timeline = () => {
           </div>
           <div>
             <p className="text-base text-gray-600">May 2021 - June 2023</p>
-            <div className="max-w-xs rounded bg-[#fab90c] p-3">
+            <div className="max-w-xs rounded bg-[#E57B35] p-3">
               <p className="text-lg font-bold text-white">
                 Full Stack Developer
               </p>
@@ -43,7 +43,7 @@ const Timeline = () => {
           </div>
           <div>
             <p className="text-base text-gray-600">December 2020 - May 2021</p>
-            <div className="max-w-xs rounded bg-[#f15d5f] p-3">
+            <div className="max-w-xs rounded bg-[#C53755] p-3">
               <p className="text-md font-semibold text-white">
                 Frontend Developer
               </p>
