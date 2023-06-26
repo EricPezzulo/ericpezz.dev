@@ -94,7 +94,7 @@ export default function Header() {
   const goToAbout: React.MouseEventHandler<HTMLButtonElement> = (e) => {
     e.preventDefault();
     document
-      .getElementById("contact-section")
+      .getElementById("about-section")
       ?.scrollIntoView({ behavior: "smooth" });
     setIsOpen(!isOpen);
   };
