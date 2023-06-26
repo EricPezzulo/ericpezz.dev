@@ -1,8 +1,14 @@
 import { GiDiploma } from "react-icons/gi";
 const Timeline = () => {
   return (
-    <div>
-      <ul className="my-5">
+    <div className="mb-5">
+      <div className="mb-5 flex w-full justify-center">
+        <p className="w-fit bg-black px-1 text-center text-2xl font-bold text-white">
+          Timeline
+        </p>
+      </div>
+
+      <ul>
         <li className="relative flex items-baseline gap-6 pb-5">
           <div className="before:absolute before:left-[5.5px] before:h-full before:w-[2px] before:bg-black">
             <svg

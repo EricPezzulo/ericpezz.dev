@@ -26,20 +26,8 @@ const Resume = () => {
       <div className="mt-3">
         <Education />
       </div>
-
       <div className="my-10">
         <DownloadResume />
-      </div>
-      {/* <div className="my-2">
-        <FancySwitch
-          enabled={enabled}
-          setEnabled={setEnabled}
-          enabledLabel="Show Resume"
-          disabledLabel="Show Timeline"
-        />
-      </div> */}
-      <div className="my-5">
-        <Timeline />
       </div>
     </div>
   );

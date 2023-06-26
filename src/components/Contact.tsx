@@ -90,13 +90,16 @@ export default function Contact() {
             <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="mt-2 flex h-9 w-36 items-center justify-center rounded bg-black text-white hover:cursor-pointer"
+              className="mt-6 flex h-12 w-44 items-center justify-center rounded bg-black text-white hover:cursor-pointer"
             >
-              <button type="submit" className="flex items-center">
+              <button
+                type="submit"
+                className="flex items-center justify-center"
+              >
                 {!sending ? (
                   <>
-                    <RiSendPlaneFill className="mx-2 h-4 w-4 text-white" />
-                    <p>Send</p>{" "}
+                    <RiSendPlaneFill className="mr-2 h-5 w-5 text-white" />
+                    <p className="text-[18px] font-medium">Send</p>{" "}
                   </>
                 ) : (
                   <>

@@ -7,6 +7,7 @@ import Hero from "~/components/Hero";
 import Contact from "~/components/Contact";
 import Footer from "~/components/Footer";
 import About from "~/components/About";
+import Timeline from "~/components/Timeline";
 
 export const metadata = {
   title: "Eric Pezzulo",
@@ -34,6 +35,9 @@ export default function Home() {
             <div className="flex flex-col items-center">
               <Projects />
               <Resume />
+              <div className="my-5">
+                <Timeline />
+              </div>
               <Skills />
               <About />
               <Contact />
