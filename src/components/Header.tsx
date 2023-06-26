@@ -98,7 +98,11 @@ export default function Header() {
           height={50}
         />
         <div className="sm:hidden">
-          <button type="button" onClick={() => setIsOpen((prev) => !prev)}>
+          <button
+            aria-label="Menu button"
+            type="button"
+            onClick={() => setIsOpen((prev) => !prev)}
+          >
             <HiMenu className="h-8 w-10" />
           </button>
         </div>
