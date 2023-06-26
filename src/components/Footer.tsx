@@ -9,7 +9,7 @@ export default function Footer() {
   const githubProfile = "https://www.github.com/EricPezzulo";
   if (!discordServer || !linkedInProfile || !githubProfile) return null;
   return (
-    <footer className="w-full p-2 pt-4">
+    <footer className="w-full p-2 pt-4 sm:bg-gray-50">
       <div className="flex h-full w-full items-center justify-evenly">
         <button type="button">
           <Link
@@ -17,7 +17,7 @@ export default function Footer() {
             target="_blank"
             aria-label="Visit my GitHub"
           >
-            <AiFillGithub className="h-6 w-6" />
+            <AiFillGithub className="h-6 w-6  sm:duration-150 sm:hover:text-gray-500" />
           </Link>
         </button>
 
@@ -27,7 +27,7 @@ export default function Footer() {
             target="_blank"
             aria-label="Visit my LinkedIn"
           >
-            <AiFillLinkedin className="h-6 w-6" />
+            <AiFillLinkedin className="h-6 w-6 sm:duration-150 sm:hover:text-gray-500" />
           </Link>
         </button>
 
@@ -37,7 +37,7 @@ export default function Footer() {
             href={discordServer}
             aria-label="Join my Discord Server"
           >
-            <BsDiscord className="h-6 w-6" />
+            <BsDiscord className="h-6 w-6 sm:duration-150 sm:hover:text-gray-500" />
           </Link>
         </button>
       </div>

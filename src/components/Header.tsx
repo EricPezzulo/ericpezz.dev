@@ -88,15 +88,17 @@ export default function Header() {
       ?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <header className="flex h-16 w-full items-end sm:px-5">
+    <header className="flex h-16 w-full items-end sm:h-24 sm:items-center sm:bg-gray-50 sm:px-5 ">
       <div className="flex w-full justify-between">
-        <Image
-          className="ml-4 sm:ml-0"
-          src="/ericLogo.png"
-          alt="test"
-          width={50}
-          height={50}
-        />
+        <div className="bg-purple">
+          <Image
+            className="ml-4 sm:ml-0"
+            src="/ericLogo.png"
+            alt="test"
+            width={50}
+            height={50}
+          />
+        </div>
         <div className="sm:hidden">
           <button
             aria-label="Menu button"
@@ -107,24 +109,24 @@ export default function Header() {
           </button>
         </div>
 
-        <div className="hidden h-fit items-center self-center align-bottom sm:flex">
+        <div className="hidden h-fit items-center self-center align-bottom sm:flex ">
           <button
             onClick={goToProjects}
-            className="px-2.5 font-thin hover:cursor-pointer sm:px-5"
+            className="px-2.5 font-thin hover:cursor-pointer sm:px-5 sm:duration-150 sm:hover:text-gray-500"
           >
             Projects
           </button>
           <button
             type="button"
             onClick={goToResume}
-            className="px-2.5 font-thin hover:cursor-pointer sm:px-5"
+            className="px-2.5 font-thin hover:cursor-pointer sm:px-5 sm:duration-150 sm:hover:text-gray-500"
           >
             Resume
           </button>
           <button
             type="button"
             onClick={goToContact}
-            className="px-2.5 font-thin hover:cursor-pointer sm:px-5"
+            className="px-2.5 font-thin hover:cursor-pointer sm:px-5 sm:duration-150 sm:hover:text-gray-500"
           >
             Contact
           </button>
@@ -136,7 +138,7 @@ export default function Header() {
               href={githubProfile}
               aria-label="Visit my GitHub"
             >
-              <PiGithubLogo className="mx-2  h-8 w-8 hover:cursor-pointer" />
+              <PiGithubLogo className="mx-2 h-8 w-8 hover:cursor-pointer sm:duration-150 sm:hover:text-gray-500" />
             </Link>
           </button>
           <button type="button">
@@ -145,7 +147,7 @@ export default function Header() {
               href={linkedInProfile}
               aria-label="Visit my LinkedIn"
             >
-              <PiLinkedinLogoLight className="h-8 w-8 hover:cursor-pointer sm:mr-2" />
+              <PiLinkedinLogoLight className="h-8 w-8 hover:cursor-pointer sm:duration-150 sm:hover:text-gray-500" />
             </Link>
           </button>
         </div>
