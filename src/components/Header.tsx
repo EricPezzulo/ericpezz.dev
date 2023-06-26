@@ -44,19 +44,19 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ isOpen, setIsOpen }) => {
             exit={{ opacity: 0, y: -10 }}
             className="absolute left-0 flex w-full items-center justify-center"
           >
-            <ul className="mt-2 flex w-full flex-col border-x border-b border-gray-200 bg-white">
+            <ul className="mx-5 mt-4 flex w-full flex-col rounded-lg  shadow-menu">
               <button type="button" onClick={goToProjects}>
-                <li className="flex w-full border-b border-gray-200 p-2 text-center text-lg font-semibold">
+                <li className="flex w-full border-b border-gray-200 p-4 text-center text-lg font-semibold duration-150 ease-in-out hover:bg-gray-100">
                   Projects
                 </li>
               </button>
               <button type="button" onClick={goToResume}>
-                <li className="flex w-full border-b border-gray-200 p-2 text-lg font-semibold">
+                <li className="flex w-full border-b border-gray-200 p-4 text-lg font-semibold duration-150 ease-in-out hover:bg-gray-100">
                   Resume
                 </li>
               </button>
               <button type="button" onClick={goToContact}>
-                <li className="flex w-full  border-gray-200 p-2 text-lg font-semibold">
+                <li className="flex w-full  border-gray-200 p-4 text-lg font-semibold duration-150 ease-in-out hover:bg-gray-100">
                   Contact
                 </li>
               </button>

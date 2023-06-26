@@ -8,8 +8,8 @@ const Notification: React.FC<VisableType> = ({ visable }) => {
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 flex items-end justify-center pb-44 text-white sm:pb-28"
-        initial={{ opacity: 0, y: 10 }}
+        className="fixed inset-0 flex items-start justify-center pt-14 text-white sm:pb-28"
+        initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 10 }}
         transition={{ duration: 0.5 }}

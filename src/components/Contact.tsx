@@ -35,6 +35,7 @@ export default function Contact() {
   const onSubmit = async (data: formData) => {
     const { fullName, email, message } = data;
     setSending(true);
+    // setTimeout(() => setSending(false), 2000);
     await fetch("/api/email", {
       method: "POST",
       body: JSON.stringify({
@@ -43,9 +44,9 @@ export default function Contact() {
         message,
       }),
     });
-    setSending(false);
-    reset();
     setNotifcation(true);
+    reset();
+    setSending(false);
     setTimeout(() => setNotifcation(false), 3000);
   };
   return (

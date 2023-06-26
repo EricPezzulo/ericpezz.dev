@@ -3,7 +3,11 @@ import { type Config } from "tailwindcss";
 export default {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        menu: "0 0 8px -1px rgba(0,0,0,0.20)",
+      },
+    },
   },
   plugins: [require("tailwind-scrollbar-hide")],
 } satisfies Config;
