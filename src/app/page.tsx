@@ -9,6 +9,8 @@ import Footer from "~/components/Footer";
 
 export const metadata = {
   title: "Eric Pezzulo",
+  description:
+    "Hi, I'm Eric and I'm a Full Stack Developer. I'm a Full Stack Develolper based in New York. I have 3 years professional experience and specialize in creating web app. I'm open for new opportunities and interesting projects",
 };
 
 export default function Home() {

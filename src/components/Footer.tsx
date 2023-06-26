@@ -12,19 +12,31 @@ export default function Footer() {
     <footer className="w-full p-2 pt-4">
       <div className="flex h-full w-full items-center justify-evenly">
         <button type="button">
-          <Link href={githubProfile} target="_blank">
+          <Link
+            href={githubProfile}
+            target="_blank"
+            aria-label="Visit my GitHub"
+          >
             <AiFillGithub className="h-6 w-6" />
           </Link>
         </button>
 
         <button type="button">
-          <Link href={linkedInProfile} target="_blank">
+          <Link
+            href={linkedInProfile}
+            target="_blank"
+            aria-label="Visit my LinkedIn"
+          >
             <AiFillLinkedin className="h-6 w-6" />
           </Link>
         </button>
 
         <button type="button">
-          <Link target="_blank" href={discordServer}>
+          <Link
+            target="_blank"
+            href={discordServer}
+            aria-label="Join my Discord Server"
+          >
             <BsDiscord className="h-6 w-6" />
           </Link>
         </button>

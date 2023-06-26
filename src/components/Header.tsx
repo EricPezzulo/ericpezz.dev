@@ -127,12 +127,20 @@ export default function Header() {
         </div>
         <div className="hidden sm:flex sm:items-center">
           <button type="button">
-            <Link target="_blank" href={githubProfile}>
+            <Link
+              target="_blank"
+              href={githubProfile}
+              aria-label="Visit my GitHub"
+            >
               <PiGithubLogo className="mx-2  h-8 w-8 hover:cursor-pointer" />
             </Link>
           </button>
           <button type="button">
-            <Link target="_blank" href={linkedInProfile}>
+            <Link
+              target="_blank"
+              href={linkedInProfile}
+              aria-label="Visit my LinkedIn"
+            >
               <PiLinkedinLogoLight className="h-8 w-8 hover:cursor-pointer sm:mr-2" />
             </Link>
           </button>

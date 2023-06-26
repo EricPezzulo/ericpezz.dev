@@ -10,7 +10,7 @@ export default function AppDemoCard() {
           Please check back later!
         </p>
       </div>
-      <h5 className="text-lg font-semibold">App Name</h5>
+      <p className="text-lg font-semibold">App Name</p>
       <div className="flex ">
         <div className="m-1 w-fit rounded-full bg-gray-200 px-3 py-1 text-sm first:ml-0">
           <p>Javascript</p>
