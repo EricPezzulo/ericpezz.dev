@@ -90,7 +90,7 @@ const Projects = () => {
             ]}
             status={"in progress"}
             description="LostVillage is an Full Stack e-Commerce website. Built with Next.js, Stripe, Clerk, and Redux.    
-          voluptas."
+          voluptas. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum nulla adipisci vitae quaerat obcaecati culpa veritatis quasi, consequuntur quidem molestiae sed quibusdam dicta odit animi provident libero blanditiis optio saepe!"
           />
           {/* <AppDemoCard />
           <AppDemoCard />
