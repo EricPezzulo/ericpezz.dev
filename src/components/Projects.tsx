@@ -1,20 +1,22 @@
 "use client";
-import { useState } from "react";
+// import { useState } from "react";
 import AppDemoCard from "./AppDemoCard/AppDemoCard";
-import ProjectSelectButton from "./elements/ProjectSelectButton";
-import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+// import ProjectSelectButton from "./elements/ProjectSelectButton";
+
+import { ProjectList } from "ProjectList";
+
 
 const Projects = () => {
-  const [selected, setSelected] = useState<string | undefined>();
+  // const [selected, setSelected] = useState<string | undefined>();
 
-  const slideLeft = () => {
-    const slider = document.getElementById("slider");
-    if (slider !== null) slider.scrollLeft = slider.scrollLeft - 355;
-  };
-  const slideRight = () => {
-    const slider = document.getElementById("slider");
-    if (slider !== null) slider.scrollLeft = slider.scrollLeft + 355;
-  };
+  // const slideLeft = () => {
+  //   const slider = document.getElementById("slider");
+  //   if (slider !== null) slider.scrollLeft = slider.scrollLeft - 355;
+  // };
+  // const slideRight = () => {
+  //   const slider = document.getElementById("slider");
+  //   if (slider !== null) slider.scrollLeft = slider.scrollLeft + 355;
+  // };
 
   return (
     <div
@@ -27,7 +29,7 @@ const Projects = () => {
         questions please ask, I&apos;d be happy to speak about them.
       </p>
 
-      <div className="mt-4 flex flex-wrap items-center justify-center sm:max-w-xl">
+      {/* <div className="mt-4 flex flex-wrap items-center justify-center sm:max-w-xl">
         <ProjectSelectButton
           buttonTitle="All"
           selected={selected}
@@ -64,48 +66,24 @@ const Projects = () => {
           setSelected={setSelected}
           amount={6}
         />
-      </div>
-      <div className="relative my-16 flex w-full max-w-sm items-center  sm:max-w-2xl md:max-w-3xl lg:max-w-4xl">
-        <AiOutlineLeft
-          onClick={slideLeft}
-          className="h-6 w-6 cursor-pointer text-black opacity-50 duration-150 hover:opacity-100"
-        />
-        <div
-          id="slider"
-          className="scroll flex h-full w-full overflow-x-scroll scroll-smooth whitespace-nowrap py-3 scrollbar-hide"
-        >
-          <AppDemoCard
-            imagePreviewUrl={
-              "https://cdn.dribbble.com/users/786628/screenshots/7633769/spendesk_app-store_ld.png?compress=1&resize=400x300&vertical=center"
-            }
-            projectTitle={"LostVillage"}
-            technologiesUsed={[
-              "TypeScript",
-              "Node",
-              "Next.js",
-              "TailwindCSS",
-              "Prisma",
-              "PostgreSQL",
-              "Clerk",
-            ]}
-            status={"in progress"}
-            description="LostVillage is an Full Stack e-Commerce website. Built with Next.js, Stripe, Clerk, and Redux.    
-          voluptas. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum nulla adipisci vitae quaerat obcaecati culpa veritatis quasi, consequuntur quidem molestiae sed quibusdam dicta odit animi provident libero blanditiis optio saepe!"
-          />
-          {/* <AppDemoCard />
-          <AppDemoCard />
-          <AppDemoCard />
-          <AppDemoCard />
-          <AppDemoCard />
-          <AppDemoCard />
-          <AppDemoCard />
-          <AppDemoCard /> */}
-        </div>
-        <AiOutlineRight
-          onClick={slideRight}
-          className="h-6 w-6 cursor-pointer text-black opacity-50 duration-150 hover:opacity-100"
-        />
-      </div>
+      </div> */}
+     
+          <div className="mt-5 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            {ProjectList.map((project, key)=>
+              <AppDemoCard
+              key={key}
+              projectScreenShots={project.projectScreenShots}
+              projectTitle={project.projectTitle}
+              technologiesUsed={project.technologiesUsed}
+              status={project.status}
+              description={project.description}
+              demoLink={project.demoLink}         />
+            
+            )}
+          </div>
+
+
+      
     </div>
   );
 };
