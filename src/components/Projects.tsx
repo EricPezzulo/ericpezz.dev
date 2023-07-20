@@ -74,15 +74,32 @@ const Projects = () => {
           id="slider"
           className="scroll flex h-full w-full overflow-x-scroll scroll-smooth whitespace-nowrap py-3 scrollbar-hide"
         >
+          <AppDemoCard
+            imagePreviewUrl={
+              "https://cdn.dribbble.com/users/786628/screenshots/7633769/spendesk_app-store_ld.png?compress=1&resize=400x300&vertical=center"
+            }
+            projectTitle={"LostVillage"}
+            technologiesUsed={[
+              "TypeScript",
+              "Node",
+              "Next.js",
+              "TailwindCSS",
+              "Prisma",
+              "PostgreSQL",
+              "Clerk",
+            ]}
+            status={"in progress"}
+            description="LostVillage is an Full Stack e-Commerce website. Built with Next.js, Stripe, Clerk, and Redux.    
+          voluptas."
+          />
+          {/* <AppDemoCard />
           <AppDemoCard />
           <AppDemoCard />
           <AppDemoCard />
           <AppDemoCard />
           <AppDemoCard />
           <AppDemoCard />
-          <AppDemoCard />
-          <AppDemoCard />
-          <AppDemoCard />
+          <AppDemoCard /> */}
         </div>
         <AiOutlineRight
           onClick={slideRight}
