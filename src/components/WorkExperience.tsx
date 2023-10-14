@@ -9,7 +9,7 @@ const WorkExperience = () => {
       <div className="my-4 text-center">
         <h4 className="text-lg font-semibold">Full Stack Developer</h4>
         <p>BuildASoil</p>
-        <p className="text-gray-500">May 2021 - June 2023</p>
+        <p className="text-gray-500">May 2020 - June 2023</p>
       </div>
 
       <div className="my-4 text-center">

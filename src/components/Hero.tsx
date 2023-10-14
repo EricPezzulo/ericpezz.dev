@@ -13,7 +13,7 @@ const Hero = () => {
       ?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <div className="min-h-screen sm:mt-14 sm:flex sm:h-96 sm:min-h-0 sm:items-center ">
+    <div className="flex h-full flex-1  sm:mt-14 sm:flex sm:h-96 sm:min-h-0 sm:items-center ">
       <div className="mt-64 sm:mt-0 sm:max-w-xl">
         <h4 className="mx-3 text-center text-4xl font-bold">
           Hi, I&apos;m Eric and I&apos;m a{" "}

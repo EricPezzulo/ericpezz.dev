@@ -26,25 +26,11 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen w-full flex-col items-center bg-white">
+    <div className="flex min-h-screen w-full flex-col items-center">
       <Header />
-      <div className="flex w-full max-w-5xl flex-col">
-        <main>
-          <div className="mt-5 flex flex-col items-center justify-center">
-            <Hero />
-            <div className="flex flex-col items-center">
-              <Projects />
-              <Resume />
-              <div className="my-5">
-                <Timeline />
-              </div>
-              <Skills />
-              <About />
-              <Contact />
-            </div>
-          </div>
-        </main>
-      </div>
+
+      <Hero />
+
       <Footer />
     </div>
   );

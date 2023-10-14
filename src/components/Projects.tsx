@@ -5,7 +5,6 @@ import AppDemoCard from "./AppDemoCard/AppDemoCard";
 
 import { ProjectList } from "ProjectList";
 
-
 const Projects = () => {
   // const [selected, setSelected] = useState<string | undefined>();
 
@@ -67,23 +66,20 @@ const Projects = () => {
           amount={6}
         />
       </div> */}
-     
-          <div className="mt-5 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {ProjectList.map((project, key)=>
-              <AppDemoCard
-              key={key}
-              projectScreenShots={project.projectScreenShots}
-              projectTitle={project.projectTitle}
-              technologiesUsed={project.technologiesUsed}
-              status={project.status}
-              description={project.description}
-              demoLink={project.demoLink}         />
-            
-            )}
-          </div>
 
-
-      
+      <div className="mt-5 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        {ProjectList.map((project, key) => (
+          <AppDemoCard
+            key={key}
+            projectScreenShots={project.projectScreenShots}
+            projectTitle={project.projectTitle}
+            technologiesUsed={project.technologiesUsed}
+            status={project.status}
+            description={project.description}
+            demoLink={project.demoLink}
+          />
+        ))}
+      </div>
     </div>
   );
 };
